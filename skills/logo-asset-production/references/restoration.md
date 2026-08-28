@@ -30,4 +30,3 @@ identify -format '%f | %wx%h | %[channels] | corner=%[pixel:p{0,0}]\n' candidate
 5. Inspect 16, 32, and 48 pixel reductions before approval.
 
 Reject candidates with a baked checkerboard, solid black/white background, typography drift, geometry drift, dirty edges, invented details, or changed proportions. A targeted retry may clarify the defect, but never accept an altered identity merely because it looks polished. If faithful restoration is not possible, report that limitation and request a better source.
-

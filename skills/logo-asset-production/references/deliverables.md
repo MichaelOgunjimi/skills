@@ -44,4 +44,3 @@ public/brand/
 ```
 
 Follow the project’s existing convention if one exists. After integration, document which source each derivative came from and the correct asset to use on light, dark, small, and social surfaces.
-
