@@ -1,0 +1,4 @@
+interface:
+  display_name: "Logo Asset Production"
+  short_description: "Turn approved logos into production-ready asset suites"
+  default_prompt: "Use $logo-asset-production to faithfully package this approved logo for my application."
