@@ -19,6 +19,19 @@ From one approved transparent mark master, produce:
 
 Use the project’s real surface color for opaque platform icons. Keep enough safe area that rounded or adaptive masks cannot clip the mark.
 
+## Dark-mode decision board
+
+When evaluating dark-mode use, create `{slug}-dark-mode-review.png` as a review-only artifact:
+
+- Use a two-column light/dark layout with equal dimensions, scale, alignment, and padding.
+- Render the unchanged approved logo on both backgrounds first.
+- Show the primary lockup above the standalone mark when both approved assets exist.
+- Use the project's real light and dark surface colors when known.
+- If adaptation appears necessary, include the unchanged and minimally adapted dark-background treatments together for comparison.
+- Keep this board out of the production asset directories and label it clearly as a review artifact.
+
+Present the board to the user for a choice before treating a newly adapted on-dark logo as approved.
+
 ## Conditional dark-mode deliverable
 
 Preview the unchanged transparent master on the project's actual dark surface. If it remains legible and visually faithful, use the same asset for light and dark modes and do not create a duplicate `on-dark` file.

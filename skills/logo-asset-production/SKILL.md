@@ -30,6 +30,16 @@ Never creatively improve, simplify, redraw, restyle, or reinterpret the logo. Ne
 
 Use the installed `imagegen` skill only for faithful restoration, extraction, or upscaling when ordinary image processing is insufficient. Its prompt must state every invariant and prohibit redesign. Reject any output that alters the mark or wordmark.
 
+## Prepare the dark-mode decision preview
+
+When dark-mode use is in scope, create a review-only comparison board before finalizing the asset choice:
+
+1. Use equal light and dark columns with the project's actual surface colors. If those colors are unavailable, use neutral white and near-black and state that they are placeholders.
+2. Show the unchanged approved logo on both surfaces at the same scale and with the same padding.
+3. Include the primary lockup and the standalone mark when both approved forms exist. Do not invent a missing form for the board.
+4. If the unchanged logo loses visibility on dark, add the minimally adapted candidate so the user can compare it with the unchanged version.
+5. Present the board with a short recommendation and ask the user to approve either reusing the original asset or shipping the on-dark adaptation. Treat the board as a decision artifact, not a production asset.
+
 ## Build the asset suite
 
 1. Preserve a versioned copy of the approved source.
@@ -56,7 +66,7 @@ When the user asks for app integration:
 - Verify actual alpha channels with `identify`; a visible checkerboard is not evidence of transparency.
 - Confirm exact file dimensions, formats, names, and expected color mode.
 - Compare restored assets directly with the approved source at large size and at 16, 32, and 48 pixels.
-- Preview the default asset on both intended surfaces before deciding whether a dark-mode adaptation is needed. If adapted, confirm that only the minimum necessary low-contrast colors changed.
+- Inspect the decision board at normal and small display sizes before deciding whether a dark-mode adaptation is needed. If adapted, confirm that only the minimum necessary low-contrast colors changed.
 - Reject distorted geometry, changed lettering, altered spacing, halos, clipped shadows, dirty alpha edges, or unintended backgrounds.
 - For app integration, render the affected pages and run the relevant lint/build checks.
 - Report whether the same asset serves both modes or an on-dark version was supplied, deterministically adapted, or background-backed; what was integrated; and anything intentionally omitted because faithful derivation was impossible.
