@@ -12,10 +12,16 @@ Browse and choose a skill interactively:
 npx skills add MichaelOgunjimi/skills
 ```
 
-Install a specific skill globally for Codex:
+Install a specific skill globally for every supported agent:
 
 ```bash
-npx skills add MichaelOgunjimi/skills --skill logo-asset-production -g -a codex
+npx skills add MichaelOgunjimi/skills --skill logo-asset-production -g -a '*'
+```
+
+After changes are merged into `main`, update the installed skill everywhere:
+
+```bash
+npx skills update -g logo-asset-production
 ```
 
 ## Available skills

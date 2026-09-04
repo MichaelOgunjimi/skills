@@ -19,9 +19,18 @@ From one approved transparent mark master, produce:
 
 Use the project’s real surface color for opaque platform icons. Keep enough safe area that rounded or adaptive masks cannot clip the mark.
 
+## Required dark-mode deliverable
+
+Every suite must include one dark-mode-safe logo output in addition to the default master:
+
+- `{slug}-mark-on-dark.png` for a transparent approved or deterministically color-adapted mark; or
+- `{slug}-mark-on-dark-background.png` when the unchanged artwork must be placed on the project's dark surface to preserve brand fidelity.
+
+Use an existing approved on-dark asset whenever available. A deterministic adaptation may change only the colors needed for contrast; it must preserve geometry, typography, proportions, spacing, gradients, and effects. Do not guess a replacement palette for a multicolor logo. Preview the result on the actual dark surface and record whether it is supplied, adapted, or background-backed.
+
 ## Conditional assets
 
-Export these only from approved sources or faithful crops:
+Export these only from approved sources, faithful crops, or the deterministic dark-mode adaptation described above:
 
 - `{slug}-horizontal-on-dark.png`
 - `{slug}-horizontal-on-light.png`

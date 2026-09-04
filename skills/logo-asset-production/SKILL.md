@@ -11,7 +11,7 @@ Productionize the approved logo without changing its identity.
 
 Treat the supplied logo as the source of truth. Preserve its symbol, wordmark, spelling, typography, colors, gradients, proportions, spacing, alignment, and intentional effects. Cleaning artifacts, extracting a background, restoring resolution, adding safe-area padding, resizing, converting formats, packaging variants, and integrating assets are allowed.
 
-Never creatively improve, simplify, redraw, restyle, or reinterpret the logo. Never replace its wordmark with a guessed font. Never invent a missing lockup, monochrome form, or light/dark variant. If a requested deliverable cannot be derived faithfully, explain what source is missing and ask for it. A request to create or redesign a logo belongs in a separate logo-design skill.
+Never creatively improve, simplify, redraw, restyle, or reinterpret the logo. Never replace its wordmark with a guessed font or invent a missing lockup. Every asset suite must include a dark-mode-safe logo variant, but derive it without changing the logo's geometry, typography, spacing, or effects. Prefer an approved on-dark source. Otherwise, use a deterministic color adaptation when the source supports one (for example, mapping a single dark neutral to an appropriate light neutral while preserving approved accent colors). If recoloring would require guessing a new palette, keep the artwork unchanged and place it on the project's dark surface with sufficient contrast and safe-area padding. Clearly label that fallback as background-backed rather than an approved recolored logo. A request to create or redesign a logo belongs in a separate logo-design skill.
 
 ## Establish the source of truth
 
@@ -35,9 +35,10 @@ Use the installed `imagegen` skill only for faithful restoration, extraction, or
 1. Preserve a versioned copy of the approved source.
 2. Produce a clean transparent mark master only if the mark can be extracted exactly.
 3. Export icon sizes, favicon, Apple touch, PWA, and maskable assets from that master.
-4. Export horizontal, stacked, on-light, on-dark, and monochrome lockups only when the approved source contains them or they can be cropped without reconstructing the identity.
-5. Do not claim a raster trace is an original vector. Supply SVG only when a faithful vector source exists or the user explicitly accepts a reconstructed trace.
-6. Use platform-safe padding and backgrounds without changing the artwork itself.
+4. Always produce a dark-mode-safe logo deliverable. Use, in order: an approved on-dark logo; a deterministic on-dark color adaptation; or an unchanged logo on the project's dark background when recoloring cannot be inferred faithfully.
+5. Export horizontal, stacked, on-light, and monochrome lockups only when the approved source contains them or they can be cropped without reconstructing the identity. Apply the same dark-mode derivation to each exported lockup when feasible.
+6. Do not claim a raster trace is an original vector. Supply SVG only when a faithful vector source exists or the user explicitly accepts a reconstructed trace.
+7. Use platform-safe padding and backgrounds without changing the artwork itself.
 
 ## Integrate only when requested
 
@@ -54,6 +55,7 @@ When the user asks for app integration:
 - Verify actual alpha channels with `identify`; a visible checkerboard is not evidence of transparency.
 - Confirm exact file dimensions, formats, names, and expected color mode.
 - Compare restored assets directly with the approved source at large size and at 16, 32, and 48 pixels.
+- Preview the default and dark-mode variants on their intended light and dark surfaces. Confirm that the dark-mode version remains legible and that any color adaptation changes only the minimum necessary colors.
 - Reject distorted geometry, changed lettering, altered spacing, halos, clipped shadows, dirty alpha edges, or unintended backgrounds.
 - For app integration, render the affected pages and run the relevant lint/build checks.
-- Report which variants were derived, which were supplied, what was integrated, and anything intentionally omitted because faithful derivation was impossible.
+- Report which variants were supplied, deterministically adapted, or background-backed; what was integrated; and anything intentionally omitted because faithful derivation was impossible.
