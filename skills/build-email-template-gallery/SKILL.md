@@ -36,24 +36,9 @@ Create a trustworthy review surface from the project's real email behavior. Foll
 - Avoid implementing email interactions that common clients cannot support. Represent actions as normal links or buttons.
 - Include empty, long-content, and many-item states when the corresponding real template can encounter them.
 
-## Preferred Gallery Page Layout
+## Gallery Shell
 
-Use a focused review-workspace shell for the outer gallery page unless the project or user specifies another structure. Apply the project's brand system to this shell; do not copy another product's palette or assets.
-
-1. Start with a compact utility header containing a back action, project mark or name, an `Email templates` descriptor, and the total template count. Avoid an oversized marketing hero.
-2. Place categories in a full-width horizontal strip directly below the header. Give each category an icon or clear label, its template count, and a visible active state.
-3. Split the main workspace into a narrow template rail and a large preview workspace:
-   - The rail contains search and a compact, preferably numbered, selectable template list.
-   - The preview workspace begins with a toolbar showing audience, template name, subject, trigger, status, layout controls when relevant, and desktop/mobile controls.
-4. Put the rendered email on a distinct preview stage. Keep the stage visually separate from both the application chrome and the email's own background.
-5. Place an inspector beside the email on wide screens. Consolidate delivery context, primary-action destination/status, and semantic variable tokens there instead of scattering them across unrelated dashboard cards.
-6. Keep the email body renderer independent from the gallery shell. A request to match or change the main page layout does not authorize changing the email design itself.
-
-Responsive behavior:
-
-- On narrower desktop/tablet widths, move the inspector below the email while keeping the template rail available.
-- On mobile, make the category strip horizontally scrollable, convert the template rail into a sticky horizontal template selector, stack toolbar controls, render the email at the available width, and place the inspector below it.
-- Preserve keyboard access, 44px touch targets where practical, visible focus states, reduced-motion behavior, and zero page-level horizontal overflow.
+Build the outer page as a three-column review workspace (header, template rail, preview stage, inspector) in the project's own brand tokens. Read [references/gallery-shell.md](references/gallery-shell.md) before building: it holds the layout spec, responsive rules, iframe isolation, accessibility semantics, wrapping defects, and the prioritized review aids (status, preheader, plain text, link table, variable check). The shell is app chrome only; never change email design because the shell changed.
 
 ## Data Model
 
