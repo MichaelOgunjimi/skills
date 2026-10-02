@@ -15,13 +15,13 @@ These are tools, not defaults. Use them when the design read calls for them. **N
 
 ### 5.A Sticky-Stack - Canonical Skeleton
 
-*Code skeleton: [assets/sticky-stack.tsx](assets/sticky-stack.tsx)*
+*Code skeleton: [assets/sticky-stack.tsx](../assets/sticky-stack.tsx)*
 
 Critical points: `start: "top top"`, `pin: true`, every card except the last is pinned, the scale/opacity transform is driven by the NEXT card's scroll trigger (so previous card shrinks as next one arrives).
 
 ### 5.B Horizontal-Pan - Canonical Skeleton
 
-*Code skeleton: [assets/horizontal-pan.tsx](assets/horizontal-pan.tsx)*
+*Code skeleton: [assets/horizontal-pan.tsx](../assets/horizontal-pan.tsx)*
 
 Critical points: `start: "top top"`, `pin: true`, `end: "+=${distance}"` (scroll length = horizontal travel needed), `scrub: 1`. The wrapper is pinned, the inner track slides horizontally as the user scrolls vertically.
 
@@ -29,7 +29,7 @@ Critical points: `start: "top top"`, `pin: true`, `end: "+=${distance}"` (scroll
 
 For simple "items appear as they enter viewport" (no pinning), prefer Motion's `whileInView` over GSAP - lighter, no ScrollTrigger needed:
 
-*Code skeleton: [assets/reveal-stagger.tsx](assets/reveal-stagger.tsx)*
+*Code skeleton: [assets/reveal-stagger.tsx](../assets/reveal-stagger.tsx)*
 
 Use this for: feature lists, testimonial grids, logo walls, anything that just needs "enter on scroll." Save GSAP for actual pin/scrub work.
 
