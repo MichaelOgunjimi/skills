@@ -1,0 +1,4 @@
+interface:
+  display_name: "Email Template Gallery"
+  short_description: "Audit and preview every project email template"
+  default_prompt: "Use $build-email-template-gallery to inventory this project’s emails and build a categorized review gallery."

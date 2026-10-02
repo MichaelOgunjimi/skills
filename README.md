@@ -29,6 +29,7 @@ npx skills update -g logo-asset-production
 | Skill | Purpose |
 |---|---|
 | [`logo-asset-production`](skills/logo-asset-production/) | Faithfully turn an approved final logo into a production-ready app and web asset suite without redesigning it. |
+| [`build-email-template-gallery`](skills/build-email-template-gallery/) | Audit a project's email surface and build a review-only gallery of email templates, variables, triggers and links. |
 
 ## Repository structure
 
