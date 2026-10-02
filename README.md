@@ -30,6 +30,10 @@ npx skills update -g logo-asset-production
 |---|---|
 | [`logo-asset-production`](skills/logo-asset-production/) | Faithfully turn an approved final logo into a production-ready app and web asset suite without redesigning it. |
 | [`build-email-template-gallery`](skills/build-email-template-gallery/) | Audit a project's email surface and build a review-only gallery of email templates, variables, triggers and links. |
+| [`taste-frontend`](skills/taste-frontend/) | Anti-slop rules for landing pages, portfolios and marketing sites: brief inference, layout, type, color, copy, imagery and a pre-flight check. |
+| [`taste-motion`](skills/taste-motion/) | Motion and scroll rules, GSAP/Motion skeletons and a vocabulary of named effects. |
+| [`taste-redesign`](skills/taste-redesign/) | Modernise an existing site without breaking its brand, IA or SEO. |
+| [`taste-design-systems`](skills/taste-design-systems/) | Map a brief to an official design system, with install commands and a Liquid Glass approximation. |
 
 ## Repository structure
 
